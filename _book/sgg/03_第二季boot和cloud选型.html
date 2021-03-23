@@ -1,0 +1,2049 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第二季boot和cloud选型 · SpringCloud Note</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="victor">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ancre-navigation/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="04_Cloud组件停更说明.html" />
+    
+    
+    <link rel="prev" href="02_零基础微服务架构理论入门.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../img/avator.png.icon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../img/avator.png.icon.ico' type="image/x-icon">
+    
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.baidu.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#springcloud">
+            
+                    
+                    SpringCloud:
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#0springcloud升级部分组件停用">
+            
+                    
+                    0,SpringCloud升级,部分组件停用:
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#环境搭建">
+            
+                    
+                    环境搭建:
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#1创建父工程pom依赖">
+            
+                    
+                    1,创建父工程,pom依赖
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#2创建子模块pay模块">
+            
+                    
+                    2,创建子模块,pay模块
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#1子模块名字">
+            
+                    
+                    1,子模块名字:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#2pom依赖">
+            
+                    
+                    2,pom依赖
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#3创建applicationyml">
+            
+                    
+                    3,创建application.yml
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#4主启动类">
+            
+                    
+                    4,主启动类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#5业务类">
+            
+                    
+                    5,业务类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#3热部署">
+            
+                    
+                    3,热部署:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#4order模块">
+            
+                    
+                    4,order模块
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#1pom">
+            
+                    
+                    1,pom
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#2yml配置文件">
+            
+                    
+                    2,yml配置文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#3主启动类">
+            
+                    
+                    3,主启动类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.4" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#4复制pay模块的实体类entity类">
+            
+                    
+                    4.复制pay模块的实体类,entity类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.5" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#5写controller类">
+            
+                    
+                    5,写controller类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#5重构">
+            
+                    
+                    5,重构,
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#1创建commons模块">
+            
+                    
+                    1,创建commons模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#2抽取公共pom">
+            
+                    
+                    2,抽取公共pom
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.3" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#3entity和实体类放入commons中">
+            
+                    
+                    3,entity和实体类放入commons中
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.4" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#4使用mavne将commone模块打包install">
+            
+                    
+                    4,使用mavne,将commone模块打包(install),
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#2服务注册与发现">
+            
+                    
+                    2,服务注册与发现
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#6eureka">
+            
+                    
+                    6,Eureka:
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#单机版eureka">
+            
+                    
+                    单机版eureka:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#集群版eureka">
+            
+                    
+                    集群版eureka:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#3将pay模块也配置为集群模式">
+            
+                    
+                    3,将pay模块也配置为集群模式:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#4修改服务主机名和ip在eureka的web上显示">
+            
+                    
+                    4,修改服务主机名和ip在eureka的web上显示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#5eureka服务发现">
+            
+                    
+                    5,eureka服务发现:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#6eureka自我保护">
+            
+                    
+                    6,Eureka自我保护:
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#7zookeeper服务注册与发现">
+            
+                    
+                    7,Zookeeper服务注册与发现:
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#1启动zk到linux上">
+            
+                    
+                    1,启动zk,到linux上
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#2创建新的pay模块">
+            
+                    
+                    2,创建新的pay模块,
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#3创建order消费模块注册到zk">
+            
+                    
+                    3,创建order消费模块注册到zk
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#8consul">
+            
+                    
+                    8,Consul:
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#1按照consul">
+            
+                    
+                    1,按照consul
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#2创建新的pay模块8006">
+            
+                    
+                    2,创建新的pay模块,8006
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#3创建新order模块">
+            
+                    
+                    3,创建新order模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#9三个注册中心的异同">
+            
+                    
+                    9,三个注册中心的异同:
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#3服务调用">
+            
+                    
+                    3,服务调用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#10ribbon负载均衡">
+            
+                    
+                    10,Ribbon负载均衡:
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#使用ribbon">
+            
+                    
+                    使用Ribbon:
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#11openfeign">
+            
+                    
+                    11,OpenFeign
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#feign与openfeign区别">
+            
+                    
+                    Feign与OpenFeign区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#使用openfeign">
+            
+                    
+                    使用OpenFeign
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.3" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#openfeign超时机制">
+            
+                    
+                    OpenFeign超时机制:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.4" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#openfeign日志">
+            
+                    
+                    OpenFeign日志:
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#4服务降级">
+            
+                    
+                    4,服务降级:
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#12hystrix服务降级">
+            
+                    
+                    12,Hystrix服务降级
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#hystrix中的重要概念">
+            
+                    
+                    hystrix中的重要概念:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#使用hystrix服务降级">
+            
+                    
+                    使用hystrix,服务降级:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#使用服务熔断">
+            
+                    
+                    使用服务熔断:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#hystrix所有可配置的属性">
+            
+                    
+                    Hystrix所有可配置的属性:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.5" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#总结">
+            
+                    
+                    总结:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.6" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#hystrix服务监控">
+            
+                    
+                    Hystrix服务监控:
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#5服务网关">
+            
+                    
+                    5,服务网关:
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#13gateway">
+            
+                    
+                    13,GateWay
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#gateway的特性">
+            
+                    
+                    GateWay的特性:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.2" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#gateway与zuul的区别">
+            
+                    
+                    GateWay与zuul的区别:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.3" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#zuul1x的模型">
+            
+                    
+                    zuul1.x的模型:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#什么是webflux">
+            
+                    
+                    什么是webflux:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.5" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#gateway的一些概念">
+            
+                    
+                    GateWay的一些概念:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.6" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#gateway的工作原理">
+            
+                    
+                    GateWay的工作原理:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.7" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#使用gateway">
+            
+                    
+                    使用GateWay:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.8" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#重构">
+            
+                    
+                    重构:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.9" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#pridicate断言">
+            
+                    
+                    Pridicate断言:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.10" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#filter过滤器">
+            
+                    
+                    Filter过滤器:
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#6服务配置">
+            
+                    
+                    6,服务配置:
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#spring-config分布式配置中心">
+            
+                    
+                    Spring Config分布式配置中心:
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1.1" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#使用配置中心">
+            
+                    
+                    使用配置中心:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.2" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#2创建配置中心客户端">
+            
+                    
+                    2,创建配置中心客户端:
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#消息总线">
+            
+                    
+                    消息总线:
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#springcloud-bus">
+            
+                    
+                    SpringCloud Bus:
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1.1" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#使用bus">
+            
+                    
+                    使用Bus:
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#8消息驱动">
+            
+                    
+                    8,消息驱动:
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#spring-cloud-stream">
+            
+                    
+                    Spring Cloud Stream:
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1.1" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#什么是spring-cloud-stream">
+            
+                    
+                    ==什么是Spring Cloud Stream==
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.2" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#spring-cloud-stream是怎么屏蔽底层差异的">
+            
+                    
+                    ==Spring Cloud Stream是怎么屏蔽底层差异的?==
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.3" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#spring-cloud-streamd-通信模式">
+            
+                    
+                    Spring Cloud Streamd 通信模式:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.4" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#spring-cloud-stream的业务流程">
+            
+                    
+                    Spring Cloud Stream的业务流程:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.5" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#常用注解和api">
+            
+                    
+                    常用注解和api:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.6" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#使用springcloudstream">
+            
+                    
+                    使用SpringCloudStream:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.7" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#1创建生产者">
+            
+                    
+                    1,创建生产者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.8" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#创建消费者">
+            
+                    
+                    创建消费者:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.9" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#创建消费者2">
+            
+                    
+                    创建消费者2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.10" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#重复消费问题">
+            
+                    
+                    ==重复消费问题:==
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.11" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#持久化问题">
+            
+                    
+                    持久化问题:
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#9链路追踪">
+            
+                    
+                    9,链路追踪:
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#spring-cloud-sleuth">
+            
+                    
+                    Spring Cloud Sleuth
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1.1" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#使用sleuth">
+            
+                    
+                    使用sleuth:
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#10spring-cloudalibaba">
+            
+                    
+                    10,Spring CloudAlibaba:
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#nacos">
+            
+                    
+                    Nacos:
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1.1" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#安装nacos">
+            
+                    
+                    安装Nacos:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.1.2" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#使用nacos">
+            
+                    
+                    使用Nacos:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.1.3" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#创建其他pay模块">
+            
+                    
+                    创建其他Pay模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.1.4" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#创建order模块">
+            
+                    
+                    创建order模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.1.5" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#nacos与其他服务注册的对比">
+            
+                    
+                    Nacos与其他服务注册的对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.1.6" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#使用nacos作为配置中心">
+            
+                    
+                    使用Nacos作为配置中心:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.1.7" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#nacos配置中心之分类配置">
+            
+                    
+                    Nacos配置中心之分类配置:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.1.8" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#nacos集群和持久化配置">
+            
+                    
+                    Nacos集群和持久化配置:
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#sentinel">
+            
+                    
+                    Sentinel:
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.2.1" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#使用sentinel">
+            
+                    
+                    ==使用sentinel:==
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2.2" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#微服务整合sentinel">
+            
+                    
+                    微服务整合sentinel:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2.3" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#sentinel的流控规则">
+            
+                    
+                    sentinel的流控规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2.4" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#降级规则">
+            
+                    
+                    降级规则:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2.5" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#热点规则">
+            
+                    
+                    热点规则:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2.6" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#3系统规则">
+            
+                    
+                    3,系统规则:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2.7" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#sentinelresource注解">
+            
+                    
+                    @SentinelResource注解:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2.8" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#服务熔断">
+            
+                    
+                    服务熔断:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2.9" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#sentinel整合ribbonopenfeignfallback">
+            
+                    
+                    sentinel整合ribbon+openFeign+fallback
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2.10" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#sentinel持久化规则">
+            
+                    
+                    sentinel持久化规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#seata">
+            
+                    
+                    Seata:
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.3.1" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#seata安装">
+            
+                    
+                    seata安装:
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#当前数据源操作类型">
+            
+                    
+                    当前数据源操作类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../SpringCloud.html">
+            
+                <a href="../SpringCloud.html#mysql驱动类">
+            
+                    
+                    mysql驱动类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" >
+            
+                <span>
+            
+                    
+                    其他
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="01_课程说明.html">
+            
+                <a href="01_课程说明.html">
+            
+                    
+                    课程说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="02_零基础微服务架构理论入门.html">
+            
+                <a href="02_零基础微服务架构理论入门.html">
+            
+                    
+                    零基础微服务架构理论入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.15.3" data-path="03_第二季boot和cloud选型.html">
+            
+                <a href="03_第二季boot和cloud选型.html">
+            
+                    
+                    第二季boot和cloud选型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="04_Cloud组件停更说明.html">
+            
+                <a href="04_Cloud组件停更说明.html">
+            
+                    
+                    Cloud组件停更说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="05_父工程Project空间新建.html">
+            
+                <a href="05_父工程Project空间新建.html">
+            
+                    
+                    父工程Project空间新建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="10_实战.html">
+            
+                <a href="10_实战.html">
+            
+                    
+                    实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第二季boot和cloud选型</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><p><a href=".03_&#x7B2C;&#x4E8C;&#x5B63;boot&#x548C;cloud&#x9009;&#x578B;_images/4f1c37c5.png" data-lightbox="16a38f77-6288-4c26-8bd0-3ecdc6b79be3" data-title=""><img src=".03_&#x7B2C;&#x4E8C;&#x5B63;boot&#x548C;cloud&#x9009;&#x578B;_images/4f1c37c5.png" alt=""></a></p>
+</body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="02_零基础微服务架构理论入门.html" class="navigation navigation-prev " aria-label="Previous page: 零基础微服务架构理论入门">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="04_Cloud组件停更说明.html" class="navigation navigation-next " aria-label="Next page: Cloud组件停更说明">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第二季boot和cloud选型","level":"1.15.3","depth":2,"next":{"title":"Cloud组件停更说明","level":"1.15.4","depth":2,"path":"sgg/04_Cloud组件停更说明.md","ref":"sgg/04_Cloud组件停更说明.md","articles":[]},"previous":{"title":"零基础微服务架构理论入门","level":"1.15.2","depth":2,"path":"sgg/02_零基础微服务架构理论入门.md","ref":"sgg/02_零基础微服务架构理论入门.md","articles":[]},"dir":"ltr"},"config":{"plugins":["hide-element","chapter-fold","expandable-chapters","favicon","lightbox","splitter","-lunr","pageview-count","ancre-navigation"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"splitter":{},"search":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"./img/avator.png.icon.ico","bookmark":"./img/avator.png.icon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"pageview-count":{},"ancre-navigation":{"showLevel":true,"associatedWithSummary":true,"mode":"float","printLog":false,"multipleH1":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"victor","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SpringCloud Note","language":"zh-hans","links":{"sidebar":{"Home":"https://www.baidu.com"}},"gitbook":"*","description":"记录SpringCloud的笔记和课件"},"file":{"path":"sgg/03_第二季boot和cloud选型.md","mtime":"2021-02-06T13:36:31.302Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-23T12:59:27.084Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
