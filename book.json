@@ -9,6 +9,8 @@
     }
   },
   "plugins": [
+    "code",
+    "valine",
     "hide-element",
     "chapter-fold",
     "expandable-chapters",
@@ -41,6 +43,10 @@
       "elements": [
         ".gitbook-link"
       ]
+    },
+    "valine": {
+      "appId": "CHjATxRcQrXst8eJrdwX0vjz-gzGzoHsz",
+      "appKey": "nWerbwV2WMAxOEmAMkJKvXzs"
     }
   }
 }
