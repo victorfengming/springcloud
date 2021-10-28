@@ -1,14 +1,18 @@
 {
-  "title": "SpringCloud Note",
-  "author": "victor",
+  "title": "SpringCloud",
   "description": "记录SpringCloud的笔记和课件",
+  "author": "Victor <victorfengming@163.com>",
   "language": "zh-hans",
+  "gitbook": "3.2.3",
+  "root": "./src",
   "links": {
     "sidebar": {
-      "Home": "https://www.baidu.com"
+      "文档索引页": "https://victorfengming.gitee.io/index/gitbook/"
     }
   },
   "plugins": [
+    "code",
+    "valine",
     "hide-element",
     "chapter-fold",
     "expandable-chapters",
@@ -17,21 +21,32 @@
     "splitter",
     "-lunr",
     "pageview-count",
-    "ancre-navigation"
+    "ancre-navigation",
+    "-search",
+    "search-plus",
+    "-highlight",
+    "popup",
+    "prism",
+    "prism-themes",
+    "-sharing",
+    "sharing-plus",
+    "tbfed-pagefooter",
+    "toolbar-button"
   ],
   "pluginsConfig": {
-    "simple-page-toc": {
-      "maxDepth": 3,
-      "skipFirstH1": true
+    "toolbar-button": {
+      "url": "https://victorfengming.gitee.io/springcloud/",
+      "icon": "fa-file-pdf-o",
+      "label": "下载PDF"
     },
-    "page-toc-button": {
-      "maxTocDepth": 2,
-      "minTocSize": 2
+    "prism": {
+      "css": [
+        "prism-themes/themes/prism-atom-dark.css"
+      ]
     },
-    "page-treeview": {
-      "copyright": "Copyright &#169; aleen42",
-      "minHeaderCount": "2",
-      "minHeaderDeep": "2"
+    "valine": {
+      "appId": "CHjATxRcQrXst8eJrdwX0vjz-gzGzoHsz",
+      "appKey": "nWerbwV2WMAxOEmAMkJKvXzs"
     },
     "favicon": {
       "shortcut": "./img/avator.png.icon.ico",
@@ -41,7 +56,48 @@
       "elements": [
         ".gitbook-link"
       ]
+    },
+    "sharing": {
+      "douban": false,
+      "facebook": false,
+      "google": false,
+      "hatenaBookmark": false,
+      "instapaper": false,
+      "line": false,
+      "linkedin": false,
+      "messenger": false,
+      "pocket": false,
+      "qq": true,
+      "qzone": true,
+      "stumbleupon": false,
+      "twitter": true,
+      "viber": false,
+      "vk": false,
+      "weibo": true,
+      "whatsapp": false,
+      "all": [
+        "douban",
+        "facebook",
+        "google",
+        "instapaper",
+        "line",
+        "linkedin",
+        "messenger",
+        "pocket",
+        "qq",
+        "qzone",
+        "stumbleupon",
+        "twitter",
+        "viber",
+        "vk",
+        "weibo",
+        "whatsapp"
+      ]
+    },
+    "tbfed-pagefooter": {
+      "copyright": "victorfengming.gitee.io，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布",
+      "modify_label": "最后更新：",
+      "modify_format": "YYYY-MM-DD HH:mm:ss"
     }
   }
 }
-
