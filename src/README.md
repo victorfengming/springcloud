@@ -10,3 +10,5 @@ gitbook参考
 - cnblogs明月:[GitBook插件整理 - book.json配置](https://www.cnblogs.com/mingyue5826/p/10307051.html)
 - [gitbook-plugin-toc](https://www.npmjs.com/package/gitbook-plugin-toc)
 - [GitBook的安装、卸载、常见问题](https://www.jianshu.com/p/1f78d8018ea7)
+- [Tencent_Gateway](https://cloud.tencent.com/developer/article/1403887)
+

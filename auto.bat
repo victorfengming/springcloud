@@ -1,1 +1,1 @@
-gitbook build ./ ./docs & git add ./docs & git commit -m"update gitbook pages" & git push -u github master & git push -u gitee master
+gitbook build ./ ./docs & git add ./docs & git commit -m"auto commit by bat script!!!" & git push -u github master & git push -u gitee master
